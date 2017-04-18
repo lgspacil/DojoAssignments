@@ -1,0 +1,21 @@
+<script>
+
+function BetterThreeFives(start, end){
+	sum = 0;
+
+	for (var i = start; i <= end; i+= 5){
+		if (i % 5 === 0 && i % 10 === 0){
+			sum += i;
+		} 
+	}
+
+	return sum;
+}
+
+console.log(BetterThreeFives(100, 4000000));
+
+
+
+
+
+</script>

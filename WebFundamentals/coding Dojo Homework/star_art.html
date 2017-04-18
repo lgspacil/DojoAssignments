@@ -1,0 +1,68 @@
+<script>
+
+function drawLeftStars(num, char){
+	var result = []
+
+	for (var i = 0; i < num; i++){
+		result.push(char);
+	}
+
+	while (result.length < 75){
+		result.push('0');
+	}
+
+	return result.join('');
+
+}
+
+//console.log(drawLeftStars(40, "^"));
+
+function drawRightStars(num, char){
+	result = [];
+
+	for (var i = 0; i < 75; i ++){
+		result.push('0');
+	}
+
+	for (var i = 0; i < num; i ++){
+		result.pop();
+	}
+
+	for (var i = 0; i < num; i ++){
+		result.push(char)
+	}
+
+	return result.join('')
+}
+
+//console.log(drawRightStars(28, '$'));
+
+
+function drawCenterStars(num, char){
+	result = [];
+
+	var x = (75 - num) * 0.5;
+	//console.log(x);
+
+	for (var i = 0; i < x; i ++){
+		result.push(' ');
+	}
+
+	for (var i = 0; i < num; i ++){
+		result.push(char);
+	}
+
+	for (var i = 0; i < x; i ++){
+		result.push(' ');
+	}
+
+	if (result.length > 75){
+		result.pop();
+	}
+
+	return result.join('');
+}
+
+console.log(drawCenterStars(20, '&'));
+
+</script>

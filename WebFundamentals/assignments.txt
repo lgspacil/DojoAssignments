@@ -1,0 +1,20 @@
+MEAN		Ruby		iOS
+Python		WebFundamentals	netCore
+
+./MEAN:
+about.txt
+
+./Python:
+about.txt
+
+./Ruby:
+about.txt
+
+./WebFundamentals:
+about.txt		indentation.html
+
+./iOS:
+about.txt
+
+./netCore:
+about.txt

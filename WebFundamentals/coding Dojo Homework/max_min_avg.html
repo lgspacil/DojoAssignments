@@ -1,0 +1,16 @@
+<script>
+
+
+var array = [14,6,77,23,53,12,3,99];
+var sum = 0;
+array.sort(function(a,b){return a - b})
+console.log("The min value is: " + array[0]);
+console.log("The max value is: " + array[array.length -1]);
+
+for (var i = 0; i < array.length; i ++){
+	sum += array[i]
+}
+console.log("The avg value is: " + (sum / array.length));
+
+
+</script>

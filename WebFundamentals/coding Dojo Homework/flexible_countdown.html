@@ -1,0 +1,26 @@
+<script>
+	
+
+function countByFours(lowNum, highNum, mult){
+	var listMult = []
+	var x;
+
+	for (var i = mult; i <= highNum; i += mult){
+		listMult.push(i);
+	}
+
+
+	var result = listMult.sort(function(a, b){return b - a});
+
+	for (x in result){
+		console.log(result[x]);
+	}
+
+}
+
+countByFours(2, 9, 3);
+
+
+
+
+</script>

@@ -1,0 +1,22 @@
+<script>
+
+function sumToOne(value){
+    sum = 0;
+
+	while (value) {
+    	sum += value % 10;
+    	value = Math.floor(value / 10);
+	}
+
+	value = sum;
+	
+	if (value >= 10){
+		sumToOne(value);
+	} else {
+		console.log(value);
+	}
+}
+
+sumToOne(928);
+
+</script>

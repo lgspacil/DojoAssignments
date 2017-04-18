@@ -1,0 +1,31 @@
+<script>
+	
+
+function flexibleCoutdown(param1, param2, param3, param4){
+	var listMult = []
+	var mult = param1
+	var x = 0;
+
+	while (mult < param3){
+		if (mult > param2 && mult != param4){
+			listMult.push(mult);
+		}
+		mult += param1
+	}
+
+
+	var result = listMult.sort(function(a, b){return a - b});
+	while (x < result.length){
+		console.log(result[x]);
+		x += 1
+	}
+	
+
+}
+
+flexibleCoutdown(3, 5, 17, 9);
+
+
+
+
+</script>

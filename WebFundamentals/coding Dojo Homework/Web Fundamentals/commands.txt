@@ -1,0 +1,14 @@
+Navigate to Desktop: cd Desktop
+
+Create a new Directory: mkdir test
+
+Make files: cd test
+touch index.html style.css commands.txt
+
+Make a copy of index.html and call it index_2.html: cp index.html index_2.html
+
+In the test direcoty remove the style.css: rm style.css
+
+Move index_2.html from test to directory: mv index_2.html ../directory 
+
+Delete the destination directory: rm -rf destination

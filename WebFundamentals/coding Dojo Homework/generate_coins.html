@@ -1,0 +1,21 @@
+<script>
+
+function generateCoinChange(cents){
+
+	var dollarConis = Math.floor(cents / 100);
+	var halfDollars = Math.floor((cents % 100) / 50);
+	var quarters = Math.floor(((cents % 100) % 50) / 25);
+	var dimes = Math.floor((((cents % 100) % 50) % 25) / 10);
+	var nickles = Math.floor(((((cents % 100) % 50) % 25) % 10) / 5);
+	var pennies = (((((cents % 100) % 50) % 25) % 10) % 5);
+
+
+	console.log("Dollar coins:" + dollarConis+ " Half-dollars:"+ halfDollars+ " Quarters:" + quarters + " Dimes:" + dimes + " Nickles:" + nickles + " Pennies:" + pennies);
+
+}
+
+generateCoinChange(109);
+
+
+
+</script>

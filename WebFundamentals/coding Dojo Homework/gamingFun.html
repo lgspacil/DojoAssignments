@@ -1,0 +1,93 @@
+<script>
+
+function rollOne(){
+	return Math.floor(Math.random() * (6) + 1);
+}
+
+function playFives(num){
+	for (var i = 0; i < num; i++){
+
+		var x = rollOne();
+
+		if (x === 5){
+			console.log(x);
+			console.log("That's good luck");
+		} else {
+			console.log(x);
+		}
+
+	}
+}
+
+
+function playStatistics(){
+	var result = []
+
+	for (var i = 0; i < 8; i++){
+		result.push(rollOne());
+	}
+
+	var sortedResult = result.sort(function(a,b){ return a - b});
+	console.log("The highest roll is: "+ sortedResult[sortedResult.length - 1]);
+	console.log("The lowest roll is: "+ sortedResult[0]);
+
+}
+
+function playStatistics2(){
+	var result = []
+
+	function getSum(total, num){
+		return total + num;
+	}
+
+	for (var i = 0; i < 8; i++){
+		result.push(rollOne());
+	}
+
+	var sortedResult = result.sort(function(a,b){ return a - b});
+	console.log("The highest roll is: "+ sortedResult[sortedResult.length - 1]);
+	console.log("The lowest roll is: "+ sortedResult[0]);
+	console.log("The total of the score is: "+ result.reduce(getSum));
+
+}
+
+function playStatistics3(num){
+	var result = []
+
+	function getSum(total, num){
+		return total + num;
+	}
+
+	for (var i = 0; i < num; i++){
+		result.push(rollOne());
+	}
+
+	var sortedResult = result.sort(function(a,b){ return a - b});
+	console.log("The highest roll is: "+ sortedResult[sortedResult.length - 1]);
+	console.log("The lowest roll is: "+ sortedResult[0]);
+	console.log("The total of the score is: "+ result.reduce(getSum));
+
+}
+
+function playStatistics4(num){
+	var result = []
+
+	function getSum(total, num){
+		return total + num;
+	}
+
+	for (var i = 0; i < num; i++){
+		result.push(rollOne());
+	}
+
+	var sortedResult = result.sort(function(a,b){ return a - b});
+	console.log("The highest roll is: "+ sortedResult[sortedResult.length - 1]);
+	console.log("The lowest roll is: "+ sortedResult[0]);
+	console.log("The average of the score is: "+ (result.reduce(getSum) / result.length));
+
+}
+playStatistics4(10000);
+
+
+
+</script>
