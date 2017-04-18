@@ -1,0 +1,24 @@
+Create a new repository on GITHUB and call it DojoAssignments:
+-> Go to github website and click on the top right to create a new repository.
+
+Open your terminal/command prompt, navigate to your DojoAssignments folder created earlier
+-> cd Desktop / cd DojoAssignments
+
+Initialize a git repository in your DojoAssignments directory
+- git init
+
+Add, commit, and push these changes to GitHub
+-git add . / git commit -m "Initial Commit"
+
+Make a readme.md in your DojoAssignments folder explaining about it's contents.
+-make sure you are in the DojoAssignments page. 
+-mkdir readme.md
+-atom . (to open it)
+-add a description inside the readme.md
+
+
+Do a status check to see the changes made, then add, commit and push your changes
+- git status (there was one change to the files)
+-git add readme.md
+-git commit -m "explaining the purpose of the repo"
+-git push
