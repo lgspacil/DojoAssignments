@@ -1,0 +1,37 @@
+.cards {
+
+background-color: lightblue;
+height: 150px;
+width: 355px;
+display: inline-block;
+
+}
+
+#card_slot{
+
+	width: 800px;
+	height: 800px;
+	background-color: orange;
+	display: inline-block;
+	vertical-align: top;
+
+
+}
+
+
+.new_box {
+	background-color: lightgreen;
+	height: 200px;
+	width: 500px;
+	border: 2px solid black;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 130px;
+	text-align: center; 
+
+}
+
+.hide {
+	display: none;
+}
+

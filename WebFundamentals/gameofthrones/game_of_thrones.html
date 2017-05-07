@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+    body{
+        background-color: #23262d;
+    }
+    
+    #topbar{
+/*        background-color: yellow;
+*/   }
+
+    .box {
+        height: 173px;
+        width: 353px;
+        display: inline-block;
+        background-color: green;
+    }
+
+    #bottomBar {
+        height: 300px;
+    }
+
+    #resultBox {
+        height: 136px;
+        width: 455px;
+        background-color: #a1a38b;
+        margin: auto;
+        margin-top: 49px;
+        text-align: center;
+    }
+
+    h3{
+        margin-top: 0px; 
+    }
+
+    
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    
+
+    
+    
+    
+    var url= "https://www.anapioficeandfire.com/api/houses/"
+
+    // $.get(url, function(res){
+    //     console.log(res);
+    // }, "json");
+
+    $("#stark").click(function(){
+        $.get(url + 362, function(res){
+
+            var content = "";
+            content += "<h3>Name: " + res.name + "</h3>";
+            content += "<h3>Words: " + res.words + "</h3>";
+            content += "<p>";
+
+            for (var i = 0; i < res.titles.length; i++){
+                if (i == res.titles.length - 1){
+                    content += res.titles[i];
+                } else{
+                    content += res.titles[i] + ", ";
+                }
+                
+            }
+
+            content += "</p>";
+
+            $('#resultBox').html(content);
+        })
+    })
+
+
+    $("#targaryen").click(function(){
+        $.get(url + 378, function(res){
+
+            var content = "";
+            content += "<h3>Name: " + res.name + "</h3>";
+            content += "<h3>Words: " + res.words + "</h3>";
+            content += "<p>";
+
+             for (var i = 0; i < res.titles.length; i++){
+                if (i == res.titles.length - 1){
+                    content += res.titles[i];
+                } else{
+                    content += res.titles[i] + ", ";
+                }
+                
+            }
+
+            content += "</p>";
+
+            $('#resultBox').html(content);
+        })
+    })
+
+
+    $("#lannister").click(function(){
+        $.get(url + 229, function(res){
+
+            var content = "";
+            content += "<h3>Name: " + res.name + "</h3>";
+            content += "<h3>Words: " + res.words + "</h3>";
+            content += "<p>";
+
+            for (var i = 0; i < res.titles.length; i++){
+                if (i == res.titles.length - 1){
+                    content += res.titles[i];
+                } else{
+                    content += res.titles[i] + ", ";
+                }
+                
+            }
+
+            content += "</p>";
+
+            $('#resultBox').html(content);
+        })
+    })
+
+
+    $("#baratheon").click(function(){
+        $.get(url + 17, function(res){
+
+            var content = "";
+            content += "<h3>Name: " + res.name + "</h3>";
+            content += "<h3>Words: " + res.words + "</h3>";
+            content += "<p>";
+
+            for (var i = 0; i < res.titles.length; i++){
+                if (i == res.titles.length - 1){
+                    content += res.titles[i];
+                } else{
+                    content += res.titles[i] + ", ";
+                }
+                
+            }
+
+            content += "</p>";
+
+            $('#resultBox').html(content);
+        })
+    })
+    
+});
+
+</script>
+</head>
+<body>
+
+<div id="topbar">
+    <img id="stark" class= "box" src="stark.jpg">
+    <img id="targaryen" class="box" src="targaryen.jpg">
+    <img id="lannister" class="box" src="lannister.jpg">
+    <img id="baratheon" class="box" src="baratheon.png">
+</div>
+
+<div id="bottomBar">
+    <div id="resultBox"></div>
+</div>
+
+</body>
+</html>

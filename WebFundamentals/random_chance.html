@@ -1,0 +1,45 @@
+<script>
+
+"use strict";
+
+
+//amount = the amount in quarters they will quit the game with even if they won
+function randomChance(quarters, amount){
+
+
+
+	var total = quarters;
+
+
+	while (quarters >= 0){
+
+		//if they hit the magic number of 50, they won!
+		if ((Math.floor(Math.random() * (100 - 0 + 1)) + 0) === 50){
+			var winning = (Math.floor(Math.random() * (100 - 50 + 1)) + 50);
+			quarters += winning;
+
+			console.log("Yay you just won " + winning + " quarters! You have a toal of " + quarters + " quarters");
+
+			if (quarters < amount){
+				console.log("Lets keep playing until you make " + amount);
+			} else {
+				console.log("You have hit your target of " + amount + " take the money and run! You have $" + (quarters*.25));
+				break;
+			}
+		} else {
+			console.log("cha-ching");
+		}
+
+		if (quarters == 0){
+			console.log("You are out of quarters");
+		}
+
+		quarters --;
+
+		
+	}
+}
+
+randomChance(50, 100);
+
+</script>

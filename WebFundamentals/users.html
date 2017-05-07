@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+  <style>
+    table {
+      border: 1px solid black;
+    }
+
+    #line {
+      height: 60px;
+      background-color: white;
+    }
+
+    input {
+      display: block;
+    }
+
+    th {
+      padding-right: 20px;
+      font-size: 26px;
+    }
+
+
+  </style>
+
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+      
+      $('form').submit(function(){
+
+        var myFirstName = $('.first_name').val();
+        var myLastName = $('.last_name').val();
+        var myEmail = $('.email').val();
+        var myContact = $('.contactNo').val();
+
+
+        $('#myTable').append('<tr><td>' + myFirstName +'</td><td>' + myLastName+ '</td><td>'+myEmail+'</td><td>'+ myContact+ '</td></tr>');
+        return false
+      });
+    });
+
+
+
+
+  </script>
+</head>
+<body>
+
+<table id="myTable">
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email Address</th>
+    <th>Contact #</th>
+</table>
+
+<div id="line"></div>
+
+<form id="form1" action="#" method="post">
+  First name:<input class="first_name" type="text" name="first_name" value="First Name">
+  Last name:<input class="last_name" type="text" name="last_name" value="Last Name">
+  Email<input class="email" type="text" name="email" value="Email">
+  Contact No: <input class="contactNo" type="text" name="contactNo" value="telephone">
+  <input type="submit" name="submit" value="submit">
+</form>
+
+
+
+</body>
+</html>

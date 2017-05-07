@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Shuriken Toss</title>
+	<style type="text/css">
+			
+	*{
+		padding: 0;
+		margin: 0;
+	}
+
+	canvas {
+		background: rgb(242, 233, 216);
+		display: block;
+		margin: 0 auto;
+	}
+	</style>
+</head>
+<body>
+
+	<canvas id="myCanvas" width="320" height="480">
+	</canvas>
+
+	<script type="text/javascript">
+		
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+
+	//variables	
+	var ninjaWidth = 29;
+    var ninjaHeight = 43;
+    var shurikenHeight = 18;
+    var shurikenWidth = 18;
+    var ninjaX = canvas.width/2 - ninjaWidth/2;
+    var ninjaY = canvas.height - ninjaHeight - 5;
+    var monsterY = 0;
+    var ninjaMovement = 3;
+    var rightPressed = false;
+    var leftPressed = false;
+    var ninjaNumber = 1;
+    var shurikenNumber = 1;
+    var monsterMove = 3;
+    var fire = false;
+    var moveShuriken = 5;
+    var shurikens = [];
+    var monsters = [];
+    var lives = 3;
+    var monsterWidth = 44
+    monsterHeight = 33
+    
+    
+    
+    function drawNinja(posx, posy) {
+    	ninjaImage = new Image();
+    	if (ninjaNumber == 1){
+    		ninjaImage.src = 'images/up1.png';
+    	} else {
+    		ninjaImage.src = 'images/up2.png';
+    	}
+   		
+   		
+    	ctx.drawImage(ninjaImage, posx, posy, ninjaWidth, ninjaHeight);
+    }
+
+    function drawMonster(){
+    	monsterImage = new Image();
+    	monsterImage.src = 'images/monster_transparent.png';
+
+    	for (var i = 0; i<monsters.length; i++){
+    		ctx.drawImage(monsterImage, monsters[i].x, monsters[i].y, monsterWidth, monsterHeight);
+    	}
+    }
+
+    function moveMonsters(){
+    	for (var i =0; i< monsters.length; i++){
+    		monsters[i].y += monsterMove;
+
+    		if (monsters[i].y > canvas.height){
+    			monsters.splice(i, 1)
+    		}
+    	}
+    }
+
+
+    function drawShurikens(){
+    	shurikenImage = new Image();
+    	if (shurikenNumber == 1){
+    		shurikenImage.src = 'images/ns1.png';
+    	} else if(shurikenNumber == 2) {
+    		shurikenImage.src = 'images/ns1_240.png';
+    	} else{
+    		shurikenImage.src = 'images/ns1_120.png';
+    	}
+
+    	for (var i = 0; i<shurikens.length; i++){
+    		ctx.drawImage(shurikenImage, shurikens[i].x, shurikens[i].y, shurikenWidth, shurikenHeight);
+    	}
+    }
+
+	function moveShurikens(){
+		for (var i = 0; i<shurikens.length; i++){
+			shurikens[i].y += shurikens[i].dy;
+
+			if(shurikens[i].y < 0){
+           		shurikens.splice(i, 1);
+           }
+		}
+	}
+
+	function drawLives(){
+		ctx.font = "16px, Arial";
+		ctx.fillStyle = "#0095DD";
+
+		ctx.fillText("Lives: "+lives, canvas.width-65, 20);
+	}
+
+	function ninjaMonsterCollision() {
+  		for (i = 0; i < monsters.length; i++) {
+  			monster = monsters[i];
+
+  			monsterminx = monster.x;
+  			monstermaxx = monster.x + monsterWidth;
+  			monsterminy = monster.y;
+  			monstermaxy = monster.y + monsterHeight;
+
+  			ninjaminx = ninjaX;
+  			ninjamaxx = ninjaX + ninjaWidth;
+  			ninjaminy = ninjaY;
+  			ninjamaxy = ninjaY + ninjaHeight;
+
+  			if ((ninjamaxx > monsterminx && ninjaminx < monstermaxx )
+  				&& (monstermaxy > ninjaminy && monsterminy < ninjamaxy )){
+  				monsters.splice(i, 1);
+  				lives -= 1;
+  			}
+  		}
+  	}
+
+  	function shurikenMonsterCollision(){
+  		for (i = 0; i < monsters.length; i++){
+  			for (j = 0; i < shurikens.length; j++){
+  				monster = monsters[i];
+  				shuriken = shurikens[j];
+
+  				monsterminx = monster.x;
+  				monstermaxx = monster.x + monsterWidth;
+  				monsterminy = monster.y;
+  				monstermaxy = monster.y + monsterHeight;
+
+          		shurikenminy = shuriken.y;
+          		shurikenmaxy = shuriken.y + shurikenHeight;
+  				shurikenmaxx = shuriken.x + shurikenWidth;
+          		shurikenminx = shuriken.x;
+  				
+  				if ((monstermaxy > shurikenminy && monsterminy < shurikenmaxy) && (shurikenmaxx > monsterminx && shurikenminx < monstermaxx)){
+  					monsters.splice(i,1);
+  					shurikens.splice(j,1);
+  				}
+
+  			}
+  		}
+  	}
+
+
+	//CONTROLS
+	document.addEventListener("keydown", keyDownHandler);
+	document.addEventListener("keyup", keyUpHandler);
+
+	function keyDownHandler(e){
+		if(e.keyCode == 39){
+			rightPressed = true;
+		} else if (e.keyCode == 37){
+			leftPressed = true;
+		}else if(e.keyCode == 32){
+			shurikens.push({x: ninjaX, y: ninjaY - shurikenHeight, dx: 0, dy: -2})
+		}
+	}
+
+	function keyUpHandler(e){
+		if(e.keyCode == 39){
+			rightPressed = false;
+		} else if (e.keyCode == 37){
+			leftPressed = false;
+		}
+	}
+
+	function loop(){
+		ctx.clearRect(0, 0, canvas.width, canvas.height);
+		drawNinja(ninjaX, ninjaY);
+		drawMonster();
+		moveMonsters();
+		drawShurikens();
+		moveShurikens();
+		drawLives();
+		ninjaMonsterCollision();
+		shurikenMonsterCollision();
+
+
+		if(rightPressed  && ninjaX < canvas.width - ninjaWidth) {
+    	ninjaX = ninjaX + ninjaMovement;
+  		} else if(leftPressed && ninjaX > 0){
+  			ninjaX = ninjaX - ninjaMovement;
+  		}
+
+	}
+
+
+	setInterval(function(){
+		monsterX = Math.floor(Math.random() * (276 - 44 + 1)) + 44;
+
+		monsters.push({x: monsterX, y: monsterY});
+	}, 800)
+
+	setInterval(function(){
+		if (shurikenNumber == 1){
+			shurikenNumber = 2;
+		} else if (shurikenNumber == 2){
+			shurikenNumber = 3;
+		} else{
+			shurikenNumber = 1;
+		}
+	}, 60)
+
+	setInterval(function(){
+		if (ninjaNumber == 1){
+			ninjaNumber = 2;
+		} else {
+			ninjaNumber = 1;
+		}
+	}, 180)
+
+
+    setInterval(loop, 16);
+	
+
+   
+
+	</script>
+
+</body>
+</html>

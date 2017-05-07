@@ -1,0 +1,223 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#wrapper {
+	margin: auto;
+	width: 1000px;
+	height: 1000px;
+	background-color: #174f78;
+}
+
+#header_bar {
+	/*background-color: blue;
+*/	width: 100%;
+	height: 136px;
+}
+
+#python_pic {
+	width: 300px;
+	/*background-color: white;*/
+	/*height: 200px;*/
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 52px;
+	margin-top: 10px;
+}
+
+#python_pic img {
+	height: 103px;
+	width: 338px;
+}
+
+#topright{
+	display: inline-block;
+	/*background-color: orange;*/
+	width: 270px;
+	margin-left: 360px;
+}
+
+#texttop {
+	margin-left: 59px;
+	margin-top: 5px;
+	color: white;
+}
+
+#texttop a{
+	color: #b5a50d;
+}
+
+#search_bar {
+	background-color: #444444;
+	height: 59px;
+	width: 275px;
+	display: inline-block;
+	border-radius: 10px;
+	margin-top: 4px;
+}
+
+
+
+#search {
+	background-color: white;
+	display: inline-block;
+	margin-top: 11px;
+	margin-left: 43px;
+	padding: 10px 60px;
+
+}
+
+#go{
+	background-color: blue;
+	color: white;
+	display: inline-block;
+	padding: 8px;
+}
+
+
+.list ul{
+	background-color: #3a7daf;
+	padding-left: 42px;
+	margin-left: 106px;
+	margin-right: 61px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.list ul li{
+	display: inline;
+	color: white;
+	font-size: 21px;
+	margin-right: 48px;
+}
+
+#last_list{
+	margin-right: 0px;
+}
+
+
+#middle_text {
+	height: 300px;
+	background-color: green;
+	margin-left: 106px;
+	margin-right: 41px;
+
+}
+
+#vertical_list{
+	display: inline-block;
+}
+
+#vertical_list ul{
+	/*background-color: red;*/
+	text-align: center;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 40px;
+
+}
+
+#vertical_list ul li{
+	margin-top: 10px;
+	color: yellow;
+}
+
+#vertical_list a{
+	color: white;
+}
+
+#right_vertical_text {
+	vertical-align: top;
+	display: inline-block;
+	/*background-color: silver;*/
+	/*width: 300px;*/
+	/*height: 300px;*/
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#history_text {
+	display: inline-block;
+	/*background-color: black;*/
+	color: white;
+	width: 642px;
+	text-align: center;
+}
+
+#wise_words {
+	/*background-color: orange;*/
+	text-align: center;
+}
+
+#wise_words h3{
+	margin-top: 10px;
+	color: #b8ae2b;
+}
+
+#wise_words h4{
+	color: white;
+	margin-top: 10px;
+}
+
+#bottom_text {
+	/*height: 300px;*/
+	background-color: white;
+	text-align: center;
+}
+
+#left {
+	width: 419px;
+	background-color: red;
+	height: 300px;
+	display: inline-block;
+	margin-left: 74px;
+}
+
+#right {
+	width: 419px;
+	background-color: blue;
+	height: 300px;
+	display: inline-block;
+	margin-left: 20px;
+	vertical-align: top;
+
+}
+
+.skinny_bar {
+	height: 10px;
+	background-color: black;
+	width: 418px;
+	margin-top: 10px;
+}
+
+.text_box {
+	display: inline-block;
+	width: 350px;
+	background-color: silver;
+}
+
+.text_box p{
+	margin-top: 10px;
+}
+
+.text_box ul {
+	width: 257px;
+	background-color: teal;
+	margin-left: 54px;
+	margin-top: 10px; 
+}
+
+.text_box ul span {
+	color: white;
+}
+
+#final_bar {
+	height: 100px;
+	background-color: green;
+}
+
+#final_bar h4{
+	display: inline;
+}
+

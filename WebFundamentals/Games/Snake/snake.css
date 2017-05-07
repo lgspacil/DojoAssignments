@@ -1,0 +1,31 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.blank{
+	background-color: blank;
+
+}
+
+td{
+	width: 20px;
+	height: 20px;
+}
+
+body {
+	background-color: black;
+}
+
+.snake {
+	background-color: white;
+
+}
+
+.wall {
+	background-color: green;
+}
+
+.fruit {
+	background-color: red;
+}

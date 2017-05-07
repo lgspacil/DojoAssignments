@@ -1,0 +1,312 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#window {
+	height: 1043px;
+	width: 700px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 30px;
+}
+
+#top_bar {
+	/*background-color: #eaeaea;*/
+	background: linear-gradient(#f7f7f5, #dfdfdf);
+	width: 700px;
+	height: 44px;
+	border-radius: 20px;
+}
+
+#flame {
+	height: 45px;
+	width: 65px;
+	display: inline-block;
+	 
+}
+
+#flame img{
+	height: 100%;
+	width: 100%;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.top_list {
+	display: inline-block;
+	/*background-color: red;*/
+	vertical-align: top;
+}
+
+.top_list li {
+	
+	margin: 20px;
+
+}
+
+.top_list ul li{
+	display: inline-block;
+	margin-top: 16px;
+	margin-right: 5px;
+	font-size: 12px;
+	font-family: "Arial Black", Gadget, sans-serif;
+	margin-left: 20px;
+
+}
+
+#last_list {
+	margin-right: 0px;
+}
+
+#search_bar {
+	background-color: white;
+	/*height: 50px;
+	width: 173px;*/
+	display: inline-block;
+	border-radius: 20px;
+	/*margin-left: 229px;*/
+	vertical-align: top;
+	margin-top: 11px;
+	margin-left: 103px;
+
+}
+
+
+#block1 {
+	height: 9px;
+	width: 12px;
+	display: inline-block;
+	vertical-align: top;
+	border-radius: 20px;
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+#block1 img {
+	height: 100%;
+	width: 100%;
+}
+
+
+
+#block2 {
+	height: 27px;
+	width: 30px;
+	background-color: orange;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 96px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px; 
+}
+
+#block2 img {
+	height: 100%;
+	width: 100%;
+}
+
+#main_img {
+	/*background-color: yellow;*/
+	margin-top: 13px; 
+}
+
+#main_img img {
+	height: 312px;
+	width: 700px;
+
+}
+
+#bar_under_img {
+	background-color: #454545;
+	margin-top: -4px;
+}
+
+#bar_under_img h4 {
+	display: inline-block;
+	font-size: 12px;
+	color: #96bcd1;
+	margin-right: 7px;
+	margin-left: 8px;
+}
+
+#bar_under_img h4 span{
+	color: white;
+}
+
+#discover {
+	/*height: 200px;*/
+	/*background-color: orange;*/
+	border: 1px solid #f0f0f0;
+	margin-top: 10px;
+
+}
+
+#ad {
+	/*background-color: blue;*/
+	display: inline-block;
+	color: #c2c2c2;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 24px;
+	margin-top: 15px;
+	margin-left: 10px;
+	margin-bottom: 15px;
+	border-right:  1px solid #f0f0f0;
+
+}
+
+#ad p {
+	margin-right: 10px;
+}
+
+#browse_the_store {
+	background-color: #4981a6;
+	height: 30px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 29px;
+	margin-top: 13px;
+	padding-bottom: 10px; 
+	color: white;
+}
+
+#browse_the_store p {
+	margin-left: 20px;
+	margin-top: 10px; 
+
+}
+
+#browse_the_store span{
+	margin-left: 48px;
+	margin-right: 10px;
+}
+
+#box_div {
+	/*background-color: purple;*/
+	height: 300px;
+}
+
+.box {
+	height: 299px; 
+	width: 172px;
+	display: inline-block;
+	/*background-color: green;*/
+	/*height: 50px;*/
+	border: 1px solid #f0f0f0;
+	vertical-align: top;
+	margin-left: -4px;
+}
+
+#box1 {
+	margin-left: 2px;
+}
+
+
+
+
+.box img {
+	margin-right: 10px;
+}
+
+.box_content {
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+
+}
+
+.box h4 {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.bio p{
+	display: inline-block;
+	font-size: 11px;
+	margin-top: 5px;
+	height: 53px;
+}
+
+.icon img {
+	margin-top: 5px;
+	width: 141px;
+	height: 141px;
+}
+
+.button {
+	background-color: #5cabe6;
+	width: 141px;
+	height: 25px;
+}
+
+.button_text {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/*margin-left: 35px;*/
+	color: white;
+	font-size: 14px;
+	text-align: center;
+}
+
+#outline_box_bottom{
+	height: 50px;
+	border: 1px solid #f0f0f0;
+	width: 694px;
+	margin-left: 2px; 
+	/*background-color: yellow;*/
+}
+
+#contact_bar {
+	/*background-color: orange;*/
+	width: 697px;
+	margin-left: 2px;
+
+}
+
+.links {
+	background-color: white;
+	width: 107px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 7px;
+}
+
+#last_link {
+	margin-right: 0px;
+}
+
+.text {
+	margin-top: 12px;
+}
+
+.text h6{
+	margin-bottom: 5px;
+	color: #878785;
+}
+
+.header {
+	margin-top: 20px;
+	font-size: 13px;
+
+}
+
+#final_bar {
+	/*background-color: red;*/
+	margin-top: 20px;
+}
+
+#final_bar h6{
+	display: inline;
+	color: #a3a3a3;
+}
+
+#final_bar span{
+	margin-left: 5px;
+	margin-right: 5px; 
+}
+
+#final_bar a {
+	color: #8ea2ab;
+}

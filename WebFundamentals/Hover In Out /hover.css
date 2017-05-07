@@ -1,0 +1,12 @@
+div {
+	height: 250px;
+	width: 250px;
+	background-color: blue;
+	display: inline-block;
+	border: solid 1px black;
+}
+
+img {
+	height: 250px;
+	width: 250px;
+}

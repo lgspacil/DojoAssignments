@@ -1,0 +1,56 @@
+<script>
+	
+var students = [ 
+     {first_name : 'Michael', last_name : 'Jordan'},
+     {first_name : 'John', last_name : 'Rosales'},
+     {first_name : 'Mark', last_name : 'Guillen'},
+     {first_name : 'KB', last_name : 'Tonel'}
+]
+
+// for (var names in students){
+// 	console.log(students[names].first_name + " " + students[names].last_name);
+// }
+
+
+//optional
+
+
+var users = {
+ 'Students': [ 
+     {first_name:  'Michael', last_name : 'Jordan'},
+     {first_name : 'John', last_name : 'Rosales'},
+     {first_name : 'Mark', last_name : 'Guillen'},
+     {first_name : 'KB', last_name : 'Tonel'}
+  ],
+ 'Instructors': [
+     {first_name : 'Michael', last_name : 'Choi'},
+     {first_name : 'Martin', last_name : 'Puryear'}
+  ]
+ }
+
+ console.log("Students")
+ var wordLength = 0;
+ var studentCount = 1;
+ var instructorCount = 1;
+
+
+ for (var names in users.Students){
+ 	wordLength = users.Students[names].first_name.length + users.Students[names].last_name.length;
+
+ 	console.log(studentCount + " - " + users.Students[names].first_name + " " + users.Students[names].last_name + " - " + wordLength);
+
+ 	studentCount ++;
+ }
+
+ console.log("Instructors");
+
+for (names in users.Instructors){
+ 	wordLength = users.Instructors[names].first_name.length + users.Instructors[names].last_name.length;
+
+ 	console.log(instructorCount + " - " + users.Instructors[names].first_name + " " + users.Instructors[names].last_name + " - " + wordLength);
+
+ 	instructorCount ++;
+ }
+
+
+</script>

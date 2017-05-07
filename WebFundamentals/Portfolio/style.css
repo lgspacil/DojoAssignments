@@ -1,0 +1,243 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#window {
+	width: 980px;
+	/*height: 980px;*/
+	background-color: #6f5964;
+	margin: auto;
+}
+
+
+#topbar {
+	background-color: #f7f7f7;
+	text-align: center; 
+	padding-top: 15px;
+	padding-bottom: 15px;
+	
+}
+
+.name {
+	font-size: 30px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.name2 {
+	font-size: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#topbar_left {
+	background-color: #f7f7f7;
+	display: inline-block;
+	margin-right: 440px;
+	
+}
+
+#topbar_right {
+	background-color: #f7f7f7;
+	display: inline-block;
+	
+
+}
+
+#container {
+	background-color: #6f5964;
+	padding: 20px;
+}
+#middlebar {
+	background-color: #6f5964;
+	margin-bottom: 10px;
+}
+
+#mypicbox {
+	height: 265px;
+	width: 380px;
+	background-color: #b7b6b6;
+	display: inline-block;
+	margin-right: 26px; 
+	vertical-align: top;
+	padding: 5px;
+}
+
+#mypicframe {
+	height: 100%;
+	width: 100%;
+	background-color: #21f3af;
+}
+
+#mypicframe img{
+	height: 100%;
+	width: 100%;
+}
+
+#aboutbar {
+	width: 100%;
+	background-color: #898794;
+	
+}
+#about {
+	height: 275px;
+	width: 520px;
+	background-color: #e5dbe5;
+	display: inline-block;
+}
+
+#aboutbar h3{
+	font-size: 21px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-top: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+	color: white;
+	background: linear-gradient(#a7a6ad, #878593, #a7a6ad);
+}
+
+#aboutpara {
+	width: 90%;
+	text-align: left;
+	margin-left: 32px;
+}
+
+#aboutpara p{
+	margin-top: 10px;
+}
+
+
+#bottombar {
+	background-color: #6f5964;
+	height: 439px;
+	/*padding: 15px;*/
+}
+
+.box{
+	display: inline-block;
+    background-color: #e2d6e1;
+    /*background-color: green;*/
+    margin-right: 25px;
+    vertical-align: top;
+    width: 294px;
+    /*height: 415px;*/
+    font-size: 10pt;
+}
+
+.boxhead {
+	width: 100%;
+	height: 10%;
+	background-color: #898794;
+}
+
+.boxhead h2{
+	padding-top: 9px;
+	padding-left: 9px;
+	color: white;
+}
+
+.boximg {
+	width: 100%;
+	height: 35%;
+	background-color: #ffffff;
+}
+
+.boximg img{
+	width: 100%;
+	height: 100%;
+	display: block;
+
+}
+
+.boxtext {
+	height: 106px;
+	display: block;
+	background-color: #e2d6e1;
+	padding: 5px;
+}
+
+.boxmiddlebar{
+	height: 32px;
+	background-color: #898794;
+	display: block;	
+}
+
+.boxmiddlebar h3{
+	padding-top: 9px;
+	padding-left: 9px;
+	color: white;
+}
+
+.minipicsbox {
+	padding-top: 10px;
+	
+}
+
+.minipic {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	margin-right: 16px;
+}
+
+.minipic img{
+	width: 100%;
+	height: 100%;
+
+}
+
+#lastbox{
+    margin-right: 0px;
+}
+
+.button {
+	/*background-color: #407d61;*/
+	display: inline-block;
+	padding-left: 130px;
+	padding-bottom: 10px;
+}
+
+.buttontext {
+	display: inline-block;
+	background-color: #407d61;
+	border-radius: 5px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 8px;
+	color: white;
+}
+
+
+#emailbar {
+	background-color: #f8f8f8;
+	height: 32px;
+	text-align: center;
+	margin-top: 22px;
+}
+
+#email {
+	margin-top: 7px;
+	background-color: #f8f8f8;
+	display: inline-block;
+}
+
+#contactbar {
+	background-color: #f8f8f8;
+	height: 32px;
+	text-align: center;
+}
+
+#contactinfo img{
+	height: 31px;
+	width: 31px;
+	display: inline-block;
+}
+
+#contactinfo h4{
+	text-decoration: underline;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 9px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 10px;
+}
+

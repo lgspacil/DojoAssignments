@@ -1,0 +1,159 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#wrapper{
+    background-color: silver;
+    width: 1080px;
+    margin: auto;
+}
+
+#topbar{
+    background-color: white;
+    vertical-align: top;
+}
+
+#topleft{
+    width: 100px;
+    display: inline;
+    margin-right: 300px;
+}
+
+#topright{
+    vertical-align: top;
+    display: inline-block;
+    font-size: 18pt;
+}
+
+#texttopright{
+    padding-top: 28px;
+    display: inline-block;
+}
+
+p{
+    font-size: 10pt;
+}
+
+ul{
+    margin-left: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul li{
+    margin-right: 30px;
+    display: inline;
+}
+
+#container{
+    padding: 20px;
+    background-color: black;
+}
+
+#imgleft{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 26px;
+    margin-bottom: 10px;
+}
+
+#aboutright{
+    display: inline-block;
+    width: 550px;
+    height: 330px;
+    background-color: #515150;
+}
+
+#aboutRightText{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+h2{
+    background-color: #ffcd15;
+    margin-bottom: 10px;
+    padding: 7px;
+}
+
+#imgleft img{
+    border: 5px solid white;
+}
+
+#midlogo{
+    display: inline;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#midtext{
+    display: inline;
+    color: #ffcd15;
+}
+
+#bottombar{
+    background-color: black;
+    padding-top: 20px;
+}
+
+#bottombar h3{
+    display: inline;
+    width: 235px;
+}
+
+#lastbox{
+    margin-right: 0px;
+}
+
+.box{
+    display: inline-block;
+    /*background-color: #ffcd15;*/
+    background-color: white;
+    margin-right: 29px;
+    vertical-align: top;
+    width: 235px;
+    height: 330px;
+    font-size: 10pt;
+}
+
+.box img{
+    height: 120px;
+    width: 235px;
+    display:block;
+}
+
+.text{
+    width: 215px;
+    height: 80px;
+    padding: 10px;
+}
+
+.headerbox{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ffcd15;
+}
+
+.button img{
+    height: 50px;
+    width: 150px;
+}
+
+#buttonbar{
+    bottom: 150px;
+    left: 150px;
+}
+.button{
+    display: inline;
+    margin-right: 130px;
+}
+
+.button img{
+    width: 85px;
+    height: 25px;
+    margin-left: 130px;
+    margin-top: 25px;
+}

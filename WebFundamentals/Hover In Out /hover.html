@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hover In Out</title>
+	<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="hover.css">
+	<script>
+		$(document).ready(function(){
+
+
+			$('#1').hover(function(){
+				
+				var temp = $(this).attr("src");
+
+				$(this).attr("src", $(this).attr("alt-src"));
+				$(this).attr('alt-src', temp);
+
+
+			});
+
+			$('#2').hover(function(){
+				
+				var temp = $(this).attr("src");
+
+				$(this).attr("src", $(this).attr("alt-src"));
+				$(this).attr('alt-src', temp);
+
+
+			});
+
+			$('#3').hover(function(){
+				
+				var temp = $(this).attr("src");
+
+				$(this).attr("src", $(this).attr("alt-src"));
+				$(this).attr('alt-src', temp);
+
+
+			});
+
+			$('#4').hover(function(){
+				
+				var temp = $(this).attr("src");
+
+				$(this).attr("src", $(this).attr("alt-src"));
+				$(this).attr('alt-src', temp);
+
+
+			});
+
+		});
+
+
+	</script>
+
+</head>
+
+<body>
+
+<div><img id="1" src="oilers.jpeg" alt-src = "blues.jpeg"></div>
+<div><img id="2" src="chicago.jpeg" alt-src = "pittsburgh.jpeg"></div>
+<div><img id="3" src="rangers.jpeg" alt-src = "leafs.jpeg"></div>
+<div><img id="4" src="capitals.jpeg" alt-src = "detroit.jpeg"></div>
+
+</body>
+</html>

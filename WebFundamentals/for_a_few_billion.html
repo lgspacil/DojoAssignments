@@ -1,0 +1,26 @@
+<script>
+
+function doubleMyMoney(start, days){
+	
+	var result = start;
+
+	for (var i = 0; i < days; i++){
+		
+		if (i == 0){
+			continue;
+		} else {
+			result = result * 2;
+		}
+
+		if (result == Infinity){
+			break;
+		}
+	}
+
+	console.log("In "+ i + " days you made " + result);
+}
+
+doubleMyMoney(0.01, 30);
+
+
+</script>

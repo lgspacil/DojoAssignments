@@ -1,0 +1,26 @@
+<script>
+
+var HOUR = 7;
+var MINUTE = 15;
+var PERIOD = "PM";
+
+var text = '';
+var day = '';
+
+if (MINUTE < 30){
+	text = 'just after ' + HOUR;
+} else {
+	text = 'almost ' + (HOUR + 1);
+}
+
+if (PERIOD == "AM"){
+	day = "morning";
+} else {
+	day = "evening";
+}
+
+console.log("It's " + text + " in the " + day);
+
+
+
+</script>

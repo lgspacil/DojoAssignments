@@ -1,0 +1,33 @@
+<script>
+
+
+
+function rangePrint(end, start, skip){
+
+
+	if (arguments.length === 3){
+		for (var i = start; i < end; i += skip){
+			console.log(i);
+		}
+	} else if (arguments.length == 2){
+		skip = 1;
+
+		for (var i = start; i < end; i += skip){
+			console.log(i);
+		}
+	} else {
+		start = 0;
+		skip = 1;
+		
+		
+
+		for (var i = start; i < end; i += skip){
+			console.log(i);
+		}
+	}
+
+}
+
+rangePrint(10);
+
+</script>

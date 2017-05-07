@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+
+<script>
+	$(document).ready(function(){
+
+		$('button').click(function(){
+			
+			var temp = $('img').attr("src");
+			$('img').attr('src', $('img').attr("alt-src"));
+			$('img').attr('alt-src', temp);
+
+
+		})
+
+
+
+	});
+
+
+
+
+</script>
+
+
+
+
+
+
+<body>
+
+<button>Click me to change the picture below</button>
+
+<img src="bird.jpg" alt-src="bug.jpg">
+
+</body>
+</html>

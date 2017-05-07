@@ -1,0 +1,50 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+#window {
+	height: 1000px;
+	width: 1000px;
+	background-color: blue;
+	margin: auto;
+}
+
+#bar {
+	width: 1000px;
+	/*height: 30px;*/
+	background-color: pink;
+}
+
+#leftsquare {
+	background-color: red;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 5px;
+}
+
+#leftsquare img {
+	height: 250px;
+	width: 250px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+
+#rightsquare {
+	background-color: black;
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	
+}
+
+#some_text {
+	position: absolute;
+	color: white;
+	top: 40px;
+	left: 225px;
+
+}
