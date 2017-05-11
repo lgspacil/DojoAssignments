@@ -137,9 +137,11 @@
   		}
   	}
 
+    // console.log(shurikens[0].y)
+
   	function shurikenMonsterCollision(){
   		for (i = 0; i < monsters.length; i++){
-  			for (j = 0; i < shurikens.length; j++){
+  			for (j = 0; j < shurikens.length; j++){
   				monster = monsters[i];
   				shuriken = shurikens[j];
 
@@ -148,10 +150,10 @@
   				monsterminy = monster.y;
   				monstermaxy = monster.y + monsterHeight;
 
-          		shurikenminy = shuriken.y;
-          		shurikenmaxy = shuriken.y + shurikenHeight;
+          shurikenminy = shuriken.y;
+          shurikenmaxy = shuriken.y + shurikenHeight;
   				shurikenmaxx = shuriken.x + shurikenWidth;
-          		shurikenminx = shuriken.x;
+          shurikenminx = shuriken.x;
   				
   				if ((monstermaxy > shurikenminy && monsterminy < shurikenmaxy) && (shurikenmaxx > monsterminx && shurikenminx < monstermaxx)){
   					monsters.splice(i,1);
