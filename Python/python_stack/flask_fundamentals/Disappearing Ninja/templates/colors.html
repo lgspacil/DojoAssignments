@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+{% if color == 'blue' %}
+	<div><img src="{{ url_for('static', filename=image) }}"></div>
+{% elif color == 'purple' %}
+	<div><img src="{{ url_for('static', filename=image) }}"></div>
+{% elif color == 'red' %}
+	<div><img src="{{ url_for('static', filename=image) }}"></div>
+{% elif color == 'orange' %}
+	<div><img src="{{ url_for('static', filename=image) }}"></div>
+{% else %}
+	<div><img src="{{ url_for('static', filename=image) }}"></div>
+{% endif %}
+
+
+
+</body>
+</html>

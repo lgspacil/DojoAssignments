@@ -1,0 +1,17 @@
+body{
+	text-align: center;
+
+}
+
+#box{
+	background-color: red;
+	color: white;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+}
+
+#para {
+	padding-top: 78px
+	font-size: 40px;
+}
