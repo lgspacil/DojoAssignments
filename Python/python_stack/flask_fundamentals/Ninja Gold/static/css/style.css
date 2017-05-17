@@ -32,8 +32,18 @@ body{
 
 }
 
-textarea {
-    overflow-y: scroll;
-    height: 100px;
+#textarea {
+    overflow: scroll;
+    height: 300px;
     resize: none; /* Remove this if you want the user to resize the textarea */
+    border: solid 1px black;
+    width: 300px;
+}
+
+#red{
+	color: red;
+}
+
+#green {
+	color: green;
 }

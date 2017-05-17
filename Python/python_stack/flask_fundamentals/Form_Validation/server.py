@@ -25,6 +25,11 @@ def submit():
 		flash("Invalid Email Address!")
 	else:
 		flash("Success!")
+
+	if request.form['email_confirm'] != request.form['email']:
+		flash("the emails are not the same")
+	elif request.form['email_confirm'] == request.form['email']:
+		flash("Success, emails are the same!")
 	return redirect('/')
 	
 

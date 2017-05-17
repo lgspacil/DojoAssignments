@@ -52,9 +52,9 @@
 
 <p>Activity</p>
 <div id="textarea">
-	<textarea rows="8" cols="50">
-	{{session['activity']}}
-	</textarea>
+	
+	{{session['activity']|safe}}
+	
 </div>
 
 

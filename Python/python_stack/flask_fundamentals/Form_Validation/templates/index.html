@@ -11,13 +11,15 @@
       {% endfor %}
     {% endif %}
   {% endwith %}
-  <form action='/process' method='POST'>
-    Name:<input type="text" name="name">
-  </form>
+
 
   <form action='/process' method='POST'>
-    Email:<input type="text" name="email">
+    Name:<input type="text" name="name">
+    email:<input type="text" name="email">
+    email confirm:<input type="text" name="email_confirm">
     <input type="submit" value="Submit">
   </form>
+
+
 </body>
 </html>
