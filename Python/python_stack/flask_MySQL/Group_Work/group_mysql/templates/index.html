@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<table>
+	<tr>
+		<th>ID</th>
+		<th>FULL NAME</th>
+		<th>EMAIL</th>
+		<th>CREATED AT</th>
+		<th>ACTIONS</th>
+	</tr>
+	{% for i in table %}
+	<tr>
+		<th>{{ i['id'] }}</th>
+		<th>{{ i['full_name'] }}</th>
+		<th>{{ i['email'] }}</th>
+		<th>{{ i['created_at'] }}</th>
+		<th><a href="/show/{{ i['id'] }}">show </a> <a href="/edit/{{ i['id'] }}">edit </a> <a href="/del/{{ i['id'] }}">del</a></th>
+	</tr>
+	{% endfor %}
+</table>
+
+<a href="/new_user">ADD NEW USER</a>
+
+</body>
+</html>

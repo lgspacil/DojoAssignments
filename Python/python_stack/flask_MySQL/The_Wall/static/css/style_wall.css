@@ -1,0 +1,17 @@
+#message_box {
+	height: 100px;
+	width: 400px;
+	border: solid 1px;
+	background-color: #cddc39;
+}
+
+body {
+	background-color: #4caf50;
+}
+
+#comment_box {
+	background-color: lightblue;
+	border: solid 1px;
+	margin-left: 50px;
+	width: 400px
+}

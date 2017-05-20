@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SHOW</title>
+</head>
+<body>
+
+{% for i in users %}
+<p>{{ i['first_name'] }}</p>
+<p>{{ i['last_name'] }}</p>
+<p>{{ i['email'] }}</p>
+<p>{{ i['password'] }}</p>
+<p>{{ i['new_date'] }}</p>
+<p>--------------------------------</p>
+{% endfor %}
+
+
+
+</body>
+</html>

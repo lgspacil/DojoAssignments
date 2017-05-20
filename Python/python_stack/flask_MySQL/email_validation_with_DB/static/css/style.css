@@ -1,0 +1,7 @@
+#alert {
+	height: 50px;
+	width: 200px;
+	background-color: red;
+	color: white;
+	border: solid 1px, black;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success Page</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_wall.css') }}">
+
+</head>
+<body>
+
+
+<h1>Greenspace</h1>
+
+
+<form action="/post" method="post">
+	<input type="textarea" name="message_post" style="width: 300px">
+	<input type="submit" value="Whats on your mind?">
+</form>
+
+
+{% for i in messages %}
+
+	<p id="message_box">{{ i['first_name'] }}  {{ i['last_name'] }} posted: {{ i['message'] }} {{ i['date'] }} the message id: {{ i['messageid'] }}</p>
+
+	{% for comment in comments %}
+
+		{% if comment['message_id'] == i['messageid'] %}
+			<p id="comment_box">{{ comment['first_name'] }} {{ comment['last_name'] }} commented: {{ comment['comment'] }} on {{comment['comment_date']}}</p>
+		{% endif %}
+
+	{% endfor %}
+
+	<form action="/comment" method="post">
+		<input type="textarea" name="comment_post" class="comment">
+		<input type="hidden" name="messageid" value="{{ i['messageid'] }}">
+		<input type="submit" value="Write a Comment">
+	</form>
+
+{% endfor %}
+
+
+
+
+
+
+
+
+
+</body>
+</html>
