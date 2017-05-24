@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Surprise Me</h1>
+
+<form action="/num" method="post">
+{% csrf_token %}
+<input type="text" name="num">
+<input type="submit" name="ready">
+
+</form>
+
+
+{{request.session.result}}
+
+</body>
+</html>
