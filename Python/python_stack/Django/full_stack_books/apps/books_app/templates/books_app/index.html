@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Book</title>
+</head>
+<body>
+
+<table>
+	<tr>
+		<th>id</th>
+		<th>Title</th>
+		<th>Author</th>
+		<th>Category</th>
+	</tr>
+	{% for book in books %}
+	<tr>
+		<th>{{book.id}}</th>
+		<th>{{book.title}}</th>
+		<th>{{book.author}}</th>
+		<th>{{book.category}}</th>
+	</tr>
+	{% endfor %}
+</table>
+
+<h3>Add a Book</h3>
+
+<form action="/add" method="post">
+{% csrf_token %}
+<label>Title<input type="text" name="title"></label>
+<label>Category<input type="text" name="category"></label>
+<label>Author<input type="text" name="author"></label>
+<input type="submit" value="Submit Book">
+</form>
+
+
+
+</body>
+</html>

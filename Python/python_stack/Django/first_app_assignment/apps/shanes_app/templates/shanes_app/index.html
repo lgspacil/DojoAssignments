@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <form action='/form_process' method="post">
+    {% csrf_token %}
+    Email: <input type='text' name="email"><br>
+    First Name: <input type='text' name="first_name"><br>
+    Last Name: <input type='text' name="Last_name"><br>
+    Password: <input type='password' name="password"><br>
+    Password Confirmation: <input type='password' name="password_confirmation"><br>
+    <input type='submit'>
+  </form>
+  </body>
+</html>
