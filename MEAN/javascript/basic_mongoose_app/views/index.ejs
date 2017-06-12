@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<h1> Form </h1>
+	<form action='/users' method='post'>
+	    Your Name:<input type="text" name="first_name"><br>
+      Age: <input type="text" name="age"><br>
+      <input type="submit" value="submit">
+	</form>
+
+
+	<ul>
+		<% for(var i =0; i < user_data.length; i++){ %>
+			<li> Name: <%= user_data[i].name %> </li>
+			<li> Age: <%= user_data[i].age %> </li>
+		<% }  %>
+	</ul>
+
+
+</body>
+</html>

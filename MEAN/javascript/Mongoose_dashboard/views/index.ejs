@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+
+<h1>Animal Index Page</h1>
+
+<a href="/add/animal">Add Animal To List</a>
+
+<% for(var i = 0; i < animal_data.length; i++){ %>
+	<h4> <a href="/animal_description/<%= animal_data[i].id%>"><%= animal_data[i].name %></a> <a href="/delete/<%= animal_data[i].id%>">Delete</a> </h4> <a href="/rename/<%= animal_data[i].id %>">Rename</a>
+	<p>------------------------------------------</p>
+<% } %>
+
+
+
+
+</body>
+</html>

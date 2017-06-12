@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result Page</title>
+</head>
+<body>
+
+	<h1>Result Page!</h1>
+
+	<ul>
+	<% for(var i = 0; i< user_data.length; i++){ %>
+		<li> First Name: <%= user_data[i].first_name %>  </li>
+		<li> Location: <%= user_data[i].location %>  </li>
+		<li> Favorite Language: <%= user_data[i].language %>  </li>
+		<li> Comment: <%= user_data[i].comment %>  </li>
+	<% } %>
+	</ul>
+
+
+<a href="/">Back</a>
+
+
+</body>
+</html>
