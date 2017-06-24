@@ -1,0 +1,38 @@
+<div class="players">
+
+  <h4>{{user_name | json}}</h4>
+  <h4>{{temp | json}}</h4>
+
+  <form *ngIf="temp1 == null" class="form-inline" class="form1">
+    <div class="form-group">
+      <h1>Player 1</h1>
+      <input type="text" class="form-control" name="user1" placeholder="git hub username" [(ngModel)]="user_name.user1">
+    </div>
+    
+    <button type="submit" class="btn btn-default" (click)="getUser1()">Get User</button>
+  </form>
+
+  <div *ngIf="temp1 != null" class="pic1">
+    <img src={{temp1}}>
+  </div>
+
+
+
+  <form *ngIf="temp2 == null" class="form-inline" class="form2">
+    <div class="form-group">
+      <h1>Player 2</h1>
+      <input type="text" class="form-control" name="user2" placeholder="git hub username" [(ngModel)]="user_name.user2">
+    </div>
+    
+    <button type="submit" class="btn btn-default" (click)="getUser2()">Get User</button>
+  </form>
+
+   <div *ngIf="temp2 != null" class="pic2">
+    <img src={{temp2}}>
+  </div>
+
+ 
+  <button *ngIf="temp1 && temp2 != null" class="btn-warning btn-block" (click)="battle()">Battle!</button>
+
+
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="selected_user">
+  {{selected_user | json}}
+
+<div *ngIf="selected_user._comments">
+    <h2>Username: {{selected_user.name | json}}</h2>
+    <h3>Posted....</h3>
+    <h4>Topics: {{selected_user._topics | json}}</h4>
+    <h4>Posts: {{selected_user._posts | json}}</h4>
+    <h4>Comments: {{selected_user._comments | json}}</h4>
+</div>
+
+</div>

@@ -1,0 +1,34 @@
+<div class="blue">
+  <h4>This is the weather Component</h4>
+
+  <!--{{weather | json}}-->
+
+  <div *ngIf='weather'><h2>{{weather.name}}</h2></div>
+
+  <form class="form-inline" (submit)="getWeather()">
+    <div class="form-group">
+      <label for="zip">Zip Code</label>
+      <!--we want to two way bind the zip code to the variable we just made-->
+      <input type="text" class="form-control" name="zip" [(ngModel)]='zip'>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+  <!--we need to provide the routerLink in the a tag because we do not want the web page to go to 
+  somewhere else. the first paramater in the array is the route we set in app.route, the second param
+  is to take in whatever param we want to provide for the temperature. it will be coming from the object
+  we got back from the API-->
+
+  <div *ngIf='weather'>
+    <a [routerLink] = "['temp', weather.main.temp]">Temperature</a>
+    <a [routerLink] = "['sky', weather.weather[0].description]">Sky</a>
+    <a [routerLink] = "['wind', weather.wind.speed]">Wind</a>
+  </div>
+
+  <div *ngIf='errors' class="red">{{errors}}</div>
+
+<!--we want whatever that will come back form this link to dispaly in the page-->
+<!--the components will render here-->
+<router-outlet></router-outlet>
+
+</div>

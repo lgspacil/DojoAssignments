@@ -1,0 +1,9 @@
+.topic{
+    border: 5px soild yellow;
+}
+
+.line{
+    width: 600px;
+    height: 5px;
+    background-color: black;
+}

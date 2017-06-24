@@ -1,0 +1,25 @@
+<form class="form-horizontal" name="addForm" #addForm="ngForm">
+  <div class="form-group">
+
+    <label class="control-label col-sm-2" for="note">Note:</label>
+    <div class="col-sm-10">
+      <input type="text" 
+      class="form-control" 
+      name="note" 
+      required minlength="4"
+      [(ngModel)]="noteobject.content"
+      #note="ngModel">
+  
+
+      <div class="red" *ngIf="note.errors && (note.touched || addForm.submitted)">
+        <p *ngIf="note.errors.minlength">Length Must be longer that 4 characters</p>
+        <p *ngIf="note.errors.required">Note is required</p>
+      </div>
+
+      <!--when button is clicked it will go to the addNote in the addnote.ts-->
+      <button class="btn-success" (click)="addNote(addForm)">Add Note</button>
+
+      {{noteobject | json}}
+    </div>
+  </div>
+</form>

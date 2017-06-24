@@ -1,0 +1,13 @@
+<h5>NoteList Component</h5>
+
+{{myName | json}}
+
+
+<ul>
+    <li *ngFor="let name of myName">
+        <p>{{name.name}} {{name.last_name}} <button (click)="deleteName(name)" >Delete</button> </p>
+    </li>
+</ul>
+
+
+

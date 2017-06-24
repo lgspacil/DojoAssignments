@@ -1,0 +1,10 @@
+.box {
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.border {
+    display: inline-block;
+}

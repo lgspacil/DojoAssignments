@@ -1,0 +1,52 @@
+<div>
+
+{{item | json}}
+
+{{products|json}}
+
+<h3>Create A new Product</h3>
+<form #regForm="ngForm" (submit)="submitform(regForm)">
+
+Title: <input 
+  type="text" 
+  name="title"
+  required
+  minlength="4"
+  [(ngModel)]="item.title"
+  #title="ngModel"><br>
+
+ <div class="red" *ngIf='title.errors && (title.touched || regForm.submitted)'>
+    <p *ngIf='title.errors.required'>Title is required</p>
+    <p *ngIf='title.errors.minlength'>Min Lenghth if 4 characters</p>
+</div>
+
+
+Price: <input 
+  type="text"
+  name="price"
+  required 
+  [(ngModel)]="item.price"
+  #price="ngModel"><br>
+
+ <div class="red" *ngIf='price.errors && (price.touched || regForm.submitted)'>
+    <p *ngIf='price.errors.required'>Price is required</p>
+</div>
+
+Image Url: 
+  <input name="image"
+  [(ngModel)]="item.image"
+  type="text"
+  #image="ngModel"><br>
+
+
+<button [disabled]="!regForm.valid" type="submit">Submit</button>
+
+
+
+</form>
+
+
+
+
+
+</div>

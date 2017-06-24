@@ -1,0 +1,59 @@
+
+
+<div class="dashboard">
+  <h1> Welcome {{name}}</h1>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Topic</th>
+        <th>Username</th>
+        <th>Posts</th>
+      </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor='let topic of list_of_topics'>
+      <td>{{ topic.category }}</td>
+      <td><a [routerLink]="['/topic/', topic._id]">{{ topic.title }}</a></td>
+      <td>{{ topic.username }}</td>
+      <td>{{ topic.count }}</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <p>---------------------------------------------------------------</p>
+
+  {{topic_obj | json }}
+
+  <strong>{{list_of_topics | json}}</strong>
+
+  <form>
+  <div class="form-group">
+    <label for="topic">Topic:</label>
+    <input type="text" class="form-control" name="title" [(ngModel)]="topic_obj.title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description:</label>
+    <textarea type="text" class="form-control" name="text" [(ngModel)]="topic_obj.text"></textarea>
+  </div>
+  
+  <label for="category">Category:</label>
+  <select name="category" [(ngModel)]="topic_obj.category">
+    <option value="html">HTML</option>
+    <option value="javascript">JAVASCRIPT</option>
+    <option value="python">PYTHON</option>
+    <option value="ruby">RUBY</option>
+  </select>
+
+<br>
+<br>
+  <button type="submit" class="btn btn-primary" (click)="postTopic()">Submit</button>
+</form>
+
+
+
+
+
+
+</div>

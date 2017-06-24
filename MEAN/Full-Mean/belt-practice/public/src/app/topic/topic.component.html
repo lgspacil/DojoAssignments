@@ -1,0 +1,51 @@
+<div class="topic">
+  
+  <h3><a [routerLink]="['/user', userid]">{{name}}</a> posted a topic </h3>
+
+  
+<div *ngIf='selected_topic'>
+  <strong><p>{{selected_topic | json }}</p></strong>
+
+    <strong><h3>{{selected_topic.title}}</h3></strong>
+
+    <p>Description {{selected_topic.text}}<p>
+</div>
+<br>
+<br>
+<br>
+
+{{post_obj | json}}
+<form>
+  <div class="form-group">
+    <label for="content">Post you answer here..</label>
+    <textarea type="text" class="form-control" name="content" placeholder="Your Post" [(ngModel)]="post_obj.content"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="makeAPost()">Post</button>
+</form>
+
+<div class="line"></div>
+
+<div *ngIf='selected_topic'>
+
+<ul *ngFor="let post of selected_topic.posts">
+  <li><a [routerLink]="['/user', post._user]">{{post.username}}</a> {{post.content}}</li>
+</ul>
+
+
+
+</div>
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+</div>

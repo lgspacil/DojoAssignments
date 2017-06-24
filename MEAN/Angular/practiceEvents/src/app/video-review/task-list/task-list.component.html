@@ -1,0 +1,33 @@
+<div class="yellowBorder">
+
+
+<h3>Task List </h3>
+
+
+  <table>
+    <thead>
+      <th>Task</th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let t of childTasks">
+        <td>{{t}}</td>
+        <td>
+          <button (click)="showForm(t)">Edit</button>
+          <button (click)="removeTask(t)">Completed</button>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  {{childTasks | json}}
+
+  <div *ngIf="taskToEdit">
+  <app-task-edit [taskToShow]='taskToEdit'
+    (tellParentToUpdate)="updateTask($event)"
+  
+  ></app-task-edit>
+  </div>
+
+
+</div>

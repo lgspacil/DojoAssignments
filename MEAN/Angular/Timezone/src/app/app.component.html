@@ -1,0 +1,26 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+   US TIME ZONE DISPLAY
+  </h1>
+
+
+  <div>
+
+    <button (click)="clicked('PST')" [ngClass]="{'box':true, 'selected': color[0]}">PST</button>
+
+    <button (click)="clicked('MST')" [ngClass]="{'box':'true', 'selected': color[1]}">MST</button>
+
+    <button (click)="clicked('CST')" [ngClass]="{'box':'true', 'selected': color[2]}">CST</button>
+
+    <button (click)="clicked('EST')" [ngClass]="{'box':'true', 'selected': color[3]}">EST</button>
+
+    <button (click)='clear()' [ngClass]="{'box':'true', 'selected': color[4]}">'CLEAR'</button>
+
+    
+  </div>
+
+  <p>{{today | date:'medium' }}</p>
+  
+  <button (click)="printing()">Console.log</button>
+

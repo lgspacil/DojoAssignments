@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<div class="red">
+
+  <h1>Anonymous Notes</h1>
+
+  <div class="green">
+  <app-add-note (addNoteEmitter)="getNotes($event)"></app-add-note>
+  </div>
+
+  <div class="blue">
+<!--the [] is making "notes" available to the child from the parent-->
+<!--we are bing the available info in the html: "notes" to the [notes] that will be in the child accessed by @Input-->
+  <app-note-list [notes]="notes"></app-note-list>
+  </div>
+
+
+
+</div>

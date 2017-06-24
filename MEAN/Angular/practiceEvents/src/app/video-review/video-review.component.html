@@ -1,0 +1,10 @@
+<div class="blue_border">
+  <h1>This is our to do List! You have {{tasks.length}} unfinished tasks!</h1>
+
+
+    <app-task-list [childTasks]="tasks" 
+    (remove)="removeTask($event)"
+    (tellParentToUpate)="updateTask($event)"></app-task-list>
+</div>
+
+

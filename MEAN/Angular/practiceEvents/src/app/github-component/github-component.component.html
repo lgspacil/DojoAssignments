@@ -1,0 +1,24 @@
+<div>
+
+<h1>GitHub Score</h1>
+
+{{result | json}}
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">github</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="username" id="inputEmail3" placeholder="github username" [(ngModel)]="username">
+    </div>
+  </div>
+ 
+</form>
+
+<button (click)="showThis()">Click</button>
+
+</div>
+
+<div *ngIf="result">
+  <h3>Your score:</h3>
+  <h4 class="green">{{result.public_repos + result.followers}}</h4>
+</div>

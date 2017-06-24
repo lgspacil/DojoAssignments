@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<h1>Index Page</h1>
+
+<form action="/post_message" method="post">
+	Name: <input type="text" name="name"><br>
+	Text: <textarea name="text"></textarea><br>
+	<input type="submit" value="Post Message">
+</form>
+
+<p> <% for(var i = 0; i < post_data.length; i++){   %> 
+	<h3>Name: <%= post_data[i].name %> </h3><br>
+	<h3>Text: <%= post_data[i].text %></h3> <br>
+
+	<% for (var j = 0; j < post_data[i].comments.length; j++){ %>
+		<h5>Name: <%= post_data[i].comments[j].name %></h5><br>
+		<h5>Comment: <%= post_data[i].comments[j].text %></h5><br>
+	<% } %>
+
+<form action="/comments/<%= post_data[i].id %>" method="post">
+	Name: <input type="text" name="name"><br>
+	Text: <input type="text" name="text"><br>
+	<input type="submit" value="add comment"><br>
+	<p>------------------------------------------</p>
+<form>
+
+<% } %></p>
+
+
+	
+</form>
+
+</body>
+</html>

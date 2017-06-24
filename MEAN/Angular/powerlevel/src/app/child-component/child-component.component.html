@@ -1,0 +1,45 @@
+
+<p>the child now can receive this info from the parent: {{powerLevel}}</p>
+
+
+<div class="box">
+  <p>Human :<br>
+  Power Level: {{powerLevel}} </p>
+
+</div>
+
+<div class="box">
+  <p>Sayian :<br>
+  Power Level: {{powerLevel * 10}} </p>
+
+</div>
+
+<div class="box">
+  <p>Super Sayian :<br>
+  Power Level: {{powerLevel * 90}} </p>
+
+</div>
+
+<div class="box">
+  <p>Super Sayian 2 :<br>
+  Power Level: {{powerLevel * 150}} </p>
+
+  <p *ngIf="powerLevel * 150 > 9000">"Over 9000!"</p>
+
+</div>
+
+<div class="box">
+  <p>Super Sayian 3 :<br>
+  Power Level: {{powerLevel * 250}} </p>
+
+  <p *ngIf="powerLevel * 250 > 20000">"Superlative!"</p>
+
+</div>
+
+<div class="box">
+  <p>Super Sayian 4 :<br>
+  Power Level: {{powerLevel * 500}} </p>
+
+  <p *ngIf="powerLevel * 500 == 50000">"The One!"</p>
+
+</div>

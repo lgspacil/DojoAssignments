@@ -1,0 +1,45 @@
+.players{
+    display: inline-block;
+    border: 5px solid red;
+    width: 700px;
+}
+
+.form1{
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 338px;
+}
+
+
+.form2{
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.pic1{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    border: 1px solid black;
+    margin-right: 338px;
+}
+
+.pic1 img{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+
+.pic2{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+    border: 1px solid black;
+}
+
+.pic2 img{
+    height: 150px;
+    width: 150px;
+    display: inline-block;
+}
+

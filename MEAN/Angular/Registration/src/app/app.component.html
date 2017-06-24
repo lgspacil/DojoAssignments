@@ -1,0 +1,146 @@
+<!--The whole content below can be removed with the new code.-->
+<div style="text-align:center">
+  <h1>
+    Registration
+  </h1>
+ 
+ <h3> Account Information </h3>
+<p>{{user | json}}</p>
+
+<p class="green">{{congrats}}</p>
+
+ <form #regForm='ngForm' (submit)="submitform(regForm)">
+
+   
+  First Name: <input 
+  type="text" 
+  name="fname"
+  required 
+  minlength="4" 
+  [(ngModel)]="user.fname"
+  #fname="ngModel"><br>
+
+   <div class="red" *ngIf='fname.errors && (fname.touched || regForm.submitted)'>
+    <p *ngIf='fname.errors.required'>First name is required</p>
+    <p *ngIf='fname.errors.minlength'>First name must contain at least 4 characters.</p>
+  </div>
+
+
+  Last Name: <input 
+  type="text" 
+  name="lname"
+  required
+  minlength="4"
+  [(ngModel)]="user.lname"
+  #lname="ngModel"><br>
+
+  <div class="red" *ngIf='lname.errors && (lname.touched || regForm.submitted)'>
+    <p *ngIf='lname.errors.required'>Last Name is required</p>
+    <p *ngIf='lname.errors.minlength'>Last name must contain at least 4 characters.</p>
+  </div>
+
+  Email: <input 
+  type="text" 
+  name="email"
+  required
+  pattern = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+  [(ngModel)]='user.email'
+  #email="ngModel"><br>
+
+  <div class="red" *ngIf='email.errors && (email.touched || regForm.submitted)'>
+    <p *ngIf='email.errors.required'>Last Name is required</p>
+    <p *ngIf='email.errors.pattern'>Enter a valid Email address.</p>
+  </div>
+
+  Password: <input 
+  type="password" 
+  name="pw"
+  required
+  minlength="4"
+  [(ngModel)]="user.password"
+  #pw="ngModel"><br>
+
+  <div class="red" *ngIf='pw.errors && (pw.touched || regForm.submitted)'>
+    <p *ngIf='pw.errors.required'>Password is required</p>
+    <p *ngIf='pw.errors.minlength'>Password must be at least 4 characters.</p>
+  </div>
+
+  Password Confirmation: <input 
+  type="password" 
+  name="pwc"
+  [(ngModel)]="user.confirmpw"
+  #pwc="ngModel"><br>
+
+  <div class="red" *ngIf='user.confirmpw != user.password && (pwc.touched || regForm.submitted)'>
+    <p>The passwords do not match!</p>
+  </div>
+
+  Street Address: <input 
+  type="text" 
+  name="street"
+  required
+  [(ngModel)]="user.street"
+  #street="ngModel"><br>
+
+  <div class="red" *ngIf='street.errors && (street.touched || regForm.submitted)'>
+    <p *ngIf='street.errors.required'>Address is required</p>
+  </div>
+
+
+  Unit/Apt: <input 
+  type="text" 
+  name="apt"
+  [(ngModel)]="user.apt"
+  #apt="ngModel"><br>
+
+  City: <input 
+  type="text" 
+  name="city"
+  required
+  [(ngModel)]="user.city"
+  #city="ngModel"><br>
+
+  <div class="red" *ngIf="city.errors && (city.touched || regForm.submitted)">
+    <p *ngIf="city.errors.required">City is Required</p>
+  </div>
+
+  State: <select 
+  name="state" 
+  required
+  [(ngModel)]="user.state"
+  #state="ngModel">
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+      <option value="CA">California</option>
+      <option value="CO">Colorado</option>
+      <option value="CT">Connecticut</option>
+      </select><br>
+  
+  <div class="red" *ngIf="state.errors && regForm.submitted">
+    <p *ngIf="state.errors.required">Selecting a state is required</p>
+  </div>
+
+  I am Feeling lucky<input 
+  type="radio" 
+  name="lucky" 
+  value=true 
+  [(ngModel)]="user.lucky"
+  >Yes
+
+  <input 
+  type="radio" 
+  name="lucky" 
+  value=false
+  [(ngModel)]="user.lucky"
+  >No<br>
+
+  <button [disabled]="!regForm.valid || user.confirmpw != user.password" type="submit">Submit</button>
+
+
+
+
+
+ </form>
+

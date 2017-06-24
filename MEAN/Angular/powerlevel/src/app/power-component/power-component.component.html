@@ -1,0 +1,12 @@
+<h1>Initial Power Level: </h1>
+
+
+  <select name="choice" #choice='ngModel' [(ngModel)]='powerlevel'>
+    <option *ngFor="let num of numbers" value="{{num}}">{{num}}</option>
+  </select>
+
+  <button (click)="powerLevel(powerlevel)">Submit</button>
+  {{ powerlevel }}
+
+<app-child-component [powerLevel]='powerlevel'></app-child-component>
+

@@ -1,0 +1,44 @@
+<div class="container">
+
+  {{tableInfo | json}}
+  
+  <form #quoteForm='ngForm' (submit)="submitform(quoteForm)">
+  <h3> Add a Quote</h3>
+  <textarea 
+  name="quote" 
+  required
+  [(ngModel)]='tableInfo.quote'
+  #quote='ngModel'></textarea><br>
+
+  <div class="red" *ngIf="quote.errors && (quote.touched || quoteForm.submitted)">
+    <p *ngIf="quote.errors.required">A quote is required!</p>
+  </div>
+
+
+  Author: <input type="text"
+  name="author"
+  required
+  [(ngModel)]='tableInfo.author'
+  #author='ngModel'>
+
+
+    <div class="red" *ngIf="author.errors && (author.touched || quoteForm.submitted)">
+      <p *ngIf="author.errors.required">An Author is required!</p>
+    </div>
+
+    <div>
+    <button [disabled]="!quoteForm.valid" type="submit" name="submit" class="btn btn-primary">Add a Quote</button>
+    </div>
+
+  </form>
+
+  <!--the [] means its writing data and passing it, it is making result available to the child
+      the () means its listening for that data-->
+  <app-quote-list [myQuote]='result' 
+  (tellParentDeleteQuote)="deleteQuote($event)" 
+  (voteUpQuote)="addOneVote($event)"
+  (voteDownQuote)="delOneVote($event)">
+  </app-quote-list>
+
+  <!--{{result | json}}-->
+</div>
