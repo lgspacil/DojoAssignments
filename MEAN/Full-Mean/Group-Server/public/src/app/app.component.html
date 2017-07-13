@@ -5,9 +5,13 @@
 
 <h1>Anonymous Notes</h1>
 
+
+<!--in the note.component.ts file we are emmiting something to the html page from 
+ruAfterPostForGet, that parameter can then be passed onto another function with the
+$event, in this case we are only emitting a string and passing this string to the makeAGetRequest made in the app.component.ts-->
 <app-note (runAfterPostForGet)="makeAGetRequest($event)"></app-note>
 
-<!--this is binging the list_of_notes that is makde available from the get 
+<!--this is binding the list_of_notes that is made available from the get 
 to be accessed by the child when using @Input allNotes-->
 <app-note-list [allNotes]="list_of_notes"></app-note-list>
 

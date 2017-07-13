@@ -49,4 +49,7 @@
 	db.students.update({}, {$currentDate:{updated_on:true}},{multi:true})
 
 
-
+<img class="mySlides" src="http://www.moonology.com/wp-content/uploads/2016/01/goals.jpeg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/css/img_lights.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/css/img_forest.jpg" style="width:100%">

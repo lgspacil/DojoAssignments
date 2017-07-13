@@ -18,6 +18,7 @@ def login(request):
 		'password' : request.POST['password']
 	}
 
+	#seding info to the user manager in models.py
 	model_rep = User.objects.login_check(postData)
 	
 
