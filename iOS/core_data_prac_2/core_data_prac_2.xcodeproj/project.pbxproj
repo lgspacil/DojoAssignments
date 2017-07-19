@@ -13,6 +13,7 @@
 		5A2080C11F171A7500502369 /* core_data_prac_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A2080BF1F171A7500502369 /* core_data_prac_2.xcdatamodeld */; };
 		5A2080C31F171A7500502369 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A2080C21F171A7500502369 /* Assets.xcassets */; };
 		5A2080C61F171A7500502369 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A2080C41F171A7500502369 /* LaunchScreen.storyboard */; };
+		5A9B4DB81F1ACA4A00854A05 /* SelectedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4DB71F1ACA4A00854A05 /* SelectedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5A2080C21F171A7500502369 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A2080C51F171A7500502369 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A2080C71F171A7500502369 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A9B4DB71F1ACA4A00854A05 /* SelectedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5A2080B81F171A7500502369 /* AppDelegate.swift */,
 				5A2080BA1F171A7500502369 /* ViewController.swift */,
 				5A2080BC1F171A7500502369 /* Main.storyboard */,
+				5A9B4DB71F1ACA4A00854A05 /* SelectedViewController.swift */,
 				5A2080C21F171A7500502369 /* Assets.xcassets */,
 				5A2080C41F171A7500502369 /* LaunchScreen.storyboard */,
 				5A2080C71F171A7500502369 /* Info.plist */,
@@ -142,6 +145,7 @@
 				5A2080C11F171A7500502369 /* core_data_prac_2.xcdatamodeld in Sources */,
 				5A2080BB1F171A7500502369 /* ViewController.swift in Sources */,
 				5A2080B91F171A7500502369 /* AppDelegate.swift in Sources */,
+				5A9B4DB81F1ACA4A00854A05 /* SelectedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +309,7 @@
 				5A2080CC1F171A7500502369 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

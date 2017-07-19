@@ -16,16 +16,20 @@ class ViewController: UIViewController {
     
     
     
+    
     var userinfo = [Users]()
     
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     
+    @IBAction func remove(_ sender: UIButton) {
+        deleteCoreData()
+    }
     
-   
     @IBAction func submitButtonPressed(_ sender: Any) {
         
         //inserting new info to Core Data
+        print(managedObjectContext)
         
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "Users", into: managedObjectContext) as! Users
         
@@ -54,7 +58,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
+        
+        // you can write this line of code below or you can click and drag the UITABLEVIEW to the ViewController declaring that it is the dataSource. -> Where the table gets its information
+        
+//        tableView.dataSource = self
+        
         fetchAllItems()
         print("the usernames are: \(userinfo)")
         print("------------------------")
@@ -68,10 +76,12 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    //pulling info from DataCore
     func fetchAllItems(){
         
         let request = NSFetchRequest<NSFetchRequestResult>.init(entityName: "Users")
-        request.returnsObjectsAsFaults = false
+//        request.returnsObjectsAsFaults = false
         
         
         do
@@ -81,19 +91,39 @@ class ViewController: UIViewController {
             if results.count > 0{
                 userinfo = results as! [Users]
             }
-        
         }
         catch
         {
             print(error)
         }
-    
     }
-
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let path = segue.destination as! SelectedViewController
+        path.delegate = self
+        path.specialWords = userinfo
+    }
+    
+    
+    //deleting the first object
+    func deleteCoreData(){
+        print("deleting")
+        print(userinfo[0])
+        let thing = userinfo[0] as NSManagedObject
+        managedObjectContext.delete(thing)
+        tableView.reloadData()
+    }
+    
+    
+    
+    
 }
 
 
 extension ViewController: UITableViewDataSource{
+    
+    //MAKING NEW CELLS IN THE TABLE VIEW
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userinfo.count
@@ -108,9 +138,6 @@ extension ViewController: UITableViewDataSource{
         
         return cell
     }
-    
-    
-    
     
 }
 

@@ -10,41 +10,62 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var seconds = 30
+    var min = 0
+    var hour = 0
     var timer = Timer()
     
     func counter() {
-        seconds -= 1
-        self.label.text = ("\(String(seconds)) seconds")
+        min += 1
+        self.label.text = ("\(String(hour)) hour and \(String(min)) minutes")
         
-        if seconds == 0{
-            timer.invalidate()
+        //where to stop the timer
+        if min == 12 && hour == 1{
+            stopTimer()
         }
+        
+        if min % 60 == 0{
+            min = min % 60
+            hour += 1
+        }
+        
+        else if min > 60{
+            min = min % 60
+            hour = min / 60
+        }
+        
+        print(min)
         
     }
 
     @IBOutlet weak var label: UILabel!
     
     
-    @IBOutlet weak var sliderOutlet: UISlider!
-    @IBAction func slider(_ sender: UISlider) {
-        seconds = Int(sender.value)
-        label.text = String(seconds)
-    }
     
     
-    @IBOutlet weak var startOutlet: UIButton!
     @IBAction func start(_ sender: UIButton) {
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {_ in
             self.counter()
         }
     )}
     
-   
-    
-    @IBOutlet weak var stopOutlet: UIButton!
-    @IBAction func stop(_ sender: UIButton) {
+    //stopping the timer and printing out how long you stayed at the gym
+    func stopTimer() {
+        timer.invalidate()
+        
+        
+        let alert = UIAlertController(title: "Success", message: "You completed your daily goal!", preferredStyle: .alert)
+        let OkAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(OkAction)
+        self.present(alert, animated: true, completion: nil)
+        
+        
+        let currentTimeInMin = self.min
+        min = 0
+        label.text = ("\(String(min)) minutes")
+        print("the total time at the gym is: \(String(hour)) hour and \(String(currentTimeInMin))")
     }
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
