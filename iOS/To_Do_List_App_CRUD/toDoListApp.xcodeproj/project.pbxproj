@@ -17,7 +17,8 @@
 		5A9B4E1B1F1BF13C00854A05 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E1A1F1BF13C00854A05 /* CustomCell.swift */; };
 		5A9B4E4A1F1E963B00854A05 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E491F1E963B00854A05 /* TaskModel.swift */; };
 		5A9B4E4C1F1E9DFE00854A05 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E4B1F1E9DFE00854A05 /* FormViewController.swift */; };
-		5A9B4E501F1FFDCE00854A05 /* TaskEditorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E4F1F1FFDCE00854A05 /* TaskEditorVC.swift */; };
+		5A9B4E521F20F42E00854A05 /* TaskEditorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E511F20F42E00854A05 /* TaskEditorVC.swift */; };
+		5A9B4E541F21389100854A05 /* CoreDataEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B4E531F21389100854A05 /* CoreDataEditVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		5A9B4E1A1F1BF13C00854A05 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		5A9B4E491F1E963B00854A05 /* TaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		5A9B4E4B1F1E9DFE00854A05 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		5A9B4E4F1F1FFDCE00854A05 /* TaskEditorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEditorVC.swift; sourceTree = "<group>"; };
+		5A9B4E511F20F42E00854A05 /* TaskEditorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskEditorVC.swift; sourceTree = "<group>"; };
+		5A9B4E531F21389100854A05 /* CoreDataEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataEditVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,12 +68,13 @@
 		5A9B4E001F1BB97B00854A05 /* toDoListApp */ = {
 			isa = PBXGroup;
 			children = (
-				5A9B4E4F1F1FFDCE00854A05 /* TaskEditorVC.swift */,
 				5A9B4E491F1E963B00854A05 /* TaskModel.swift */,
 				5A9B4E011F1BB97B00854A05 /* AppDelegate.swift */,
 				5A9B4E031F1BB97B00854A05 /* ViewController.swift */,
 				5A9B4E1A1F1BF13C00854A05 /* CustomCell.swift */,
 				5A9B4E051F1BB97B00854A05 /* Main.storyboard */,
+				5A9B4E531F21389100854A05 /* CoreDataEditVC.swift */,
+				5A9B4E511F20F42E00854A05 /* TaskEditorVC.swift */,
 				5A9B4E4B1F1E9DFE00854A05 /* FormViewController.swift */,
 				5A9B4E181F1BEA2E00854A05 /* CustomCellTableViewController.swift */,
 				5A9B4E0B1F1BB97B00854A05 /* Assets.xcassets */,
@@ -154,9 +157,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9B4E541F21389100854A05 /* CoreDataEditVC.swift in Sources */,
+				5A9B4E521F20F42E00854A05 /* TaskEditorVC.swift in Sources */,
 				5A9B4E4A1F1E963B00854A05 /* TaskModel.swift in Sources */,
 				5A9B4E041F1BB97B00854A05 /* ViewController.swift in Sources */,
-				5A9B4E501F1FFDCE00854A05 /* TaskEditorVC.swift in Sources */,
 				5A9B4E4C1F1E9DFE00854A05 /* FormViewController.swift in Sources */,
 				5A9B4E191F1BEA2E00854A05 /* CustomCellTableViewController.swift in Sources */,
 				5A9B4E1B1F1BF13C00854A05 /* CustomCell.swift in Sources */,

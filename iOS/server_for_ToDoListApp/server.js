@@ -35,7 +35,7 @@ app.get('/tasks', function(req, res) {
 		if(err){
 			console.log("there was an error loading the page");
 		}else{
-			res.send(result);
+			res.json(result);
 		}
 	})
 });
@@ -76,18 +76,16 @@ app.post('/update', function(req, res){
 
 	console.log(req.body)
 
-	BucketList.update({_id: req.params.id}, function(err, result){
+	BucketList.findOneAndUpdate({_id: req.body.id}, { task: req.body["task"] }, {new : true},function(err, result){
 		if (err) {
 			console.log("there was an error updating")
 		}else{
-			res.redirect('/tasks');
+			// res.redirect('/tasks');
+			console.log("RESULT: ", result)
+			res.json(result);
 		}
 	})
 })
-
-
-
-
 
 
 

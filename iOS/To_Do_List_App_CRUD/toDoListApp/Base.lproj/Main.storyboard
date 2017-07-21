@@ -180,7 +180,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="vGL-rm-6wX" kind="presentation" identifier="editTask" id="LRe-Oc-2Ch"/>
+                                            <segue destination="8Cf-Py-Tbo" kind="presentation" identifier="editTask" id="4S0-8p-s7m"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -206,33 +206,43 @@
             </objects>
             <point key="canvasLocation" x="773.60000000000002" y="1001.649175412294"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="fiz-M2-qqL">
+        <!--Task EditorVC-->
+        <scene sceneID="CIT-mb-kRN">
             <objects>
-                <tableViewController id="vGL-rm-6wX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zeh-1G-BvT">
+                <viewController id="8Cf-Py-Tbo" customClass="TaskEditorVC" customModule="toDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="11r-yV-Lfk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mi5-L9-vkh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="P8H-g5-DRH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jbm-kW-3YE">
+                                <rect key="frame" x="47" y="102" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWx-Nj-7IQ">
+                                <rect key="frame" x="159" y="267" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SUBMIT"/>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="8Cf-Py-Tbo" eventType="touchUpInside" id="Bo7-7V-iiq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="editTaskCell" id="8EL-5y-iQ9">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8EL-5y-iQ9" id="c6v-ts-Dxx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="vGL-rm-6wX" id="zJC-5t-zQz"/>
-                            <outlet property="delegate" destination="vGL-rm-6wX" id="NE7-PQ-wnN"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Jj-AN-5Qd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <connections>
+                        <outlet property="editorText" destination="Jbm-kW-3YE" id="PWQ-rD-yZx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXM-8U-SOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1958" y="1060"/>
+            <point key="canvasLocation" x="1855.2" y="945.87706146926541"/>
         </scene>
         <!--Custom Cell Table View Controller-->
         <scene sceneID="Ns5-ka-Afd">
@@ -243,11 +253,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customCell" rowHeight="115" id="Pgu-if-PRN" customClass="CustomCell" customModule="toDoListApp" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="customCell" rowHeight="115" id="Pgu-if-PRN" customClass="CustomCell" customModule="toDoListApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="115"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Pgu-if-PRN" id="hF5-rj-MTx">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="328" height="115"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CD1-Np-Hs7">
@@ -274,7 +284,7 @@
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQI-p1-B0t">
                                             <rect key="frame" x="321" y="77" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Back"/>
+                                            <state key="normal" title="Back!"/>
                                             <connections>
                                                 <action selector="goBackButtonPressed:" destination="Pgu-if-PRN" eventType="touchUpInside" id="das-L0-3Z2"/>
                                                 <segue destination="BYZ-38-t0r" kind="show" id="AS9-Vl-nte"/>
@@ -286,6 +296,7 @@
                                     <outlet property="date" destination="nfu-8o-wqI" id="1dX-jW-3mh"/>
                                     <outlet property="descriptionText" destination="Xpn-ro-9pa" id="WdA-Oe-rbY"/>
                                     <outlet property="title" destination="CD1-Np-Hs7" id="rr8-Pq-X3Z"/>
+                                    <segue destination="JDR-nm-zeG" kind="presentation" identifier="editCoreData" id="KDM-PO-kdy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -298,6 +309,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wdm-SH-eaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1836" y="152"/>
+        </scene>
+        <!--Core Data EditVC-->
+        <scene sceneID="nqY-rR-AbW">
+            <objects>
+                <viewController id="JDR-nm-zeG" customClass="CoreDataEditVC" customModule="toDoListApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mSv-If-9SO"/>
+                        <viewControllerLayoutGuide type="bottom" id="qk3-eS-bku"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CXp-wc-iFw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PD5-sL-YZd">
+                                <rect key="frame" x="16" y="143" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3f-o8-SVp">
+                                <rect key="frame" x="16" y="286" width="343" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="UPDATE CORE DATA">
+                                    <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateButtonPressed:" destination="JDR-nm-zeG" eventType="touchUpInside" id="VDw-DF-3ZA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="textInfo" destination="PD5-sL-YZd" id="sRB-em-2Yj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwJ-15-0xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3060" y="65.217391304347828"/>
         </scene>
     </scenes>
 </document>

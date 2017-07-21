@@ -68,6 +68,15 @@ class FormViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "editTask"{
+            let des = segue.destination as! TaskEditorVC
+            des.delegate = self
+            des.editCell = sender as? NSDictionary
+        }
+    }
+    
     
 }
 
@@ -109,16 +118,10 @@ extension FormViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
         print("accessory button tapped")
         
-        performSegue(withIdentifier: "editTask", sender: backEnd[indexPath.row]["task"])
+        performSegue(withIdentifier: "editTask", sender: backEnd[indexPath.row])
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        
-//        if segue.identifier == "editTask"{
-//            let path = segue.destination as! TaskEditorVC
-//            path.delegate = self
-//        }
-//    }
+  
 
 
 }

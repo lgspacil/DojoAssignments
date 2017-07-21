@@ -54,6 +54,8 @@ class TaskModel {
     
     static func updateTaskWithId(id: String, newTask: String, completionHandler: @escaping(_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void){
         
+        print("inside update function")
+        
         if let urlToReq = URL(string: "http://localhost:8000/update"){
             
             var request = URLRequest(url: urlToReq)
@@ -66,6 +68,7 @@ class TaskModel {
             
             let session = URLSession.shared
             let task = session.dataTask(with: request as URLRequest, completionHandler: completionHandler)
+            print("going to resume")
             task.resume()
             
         }

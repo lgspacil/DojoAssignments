@@ -16,6 +16,7 @@ class CustomCell: UITableViewCell {
     @IBOutlet weak var descriptionText: UILabel!
     
     @IBAction func goBackButtonPressed(_ sender: Any) {
+        print("back button clicked")
         
     }
 

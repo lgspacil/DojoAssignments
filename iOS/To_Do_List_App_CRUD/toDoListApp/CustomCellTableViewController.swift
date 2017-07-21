@@ -103,6 +103,45 @@ class CustomCellTableViewController: UITableViewController {
     tableView.reloadData()
     }
     
+
+    
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+//            // delete item at indexPath
+//        }
+//        
+//        let share = UITableViewRowAction(style: .normal, title: "Disable") { (action, indexPath) in
+//            // share item at indexPath
+//            print("DISS: ", indexPath.row)
+//        }
+//        
+//        share.backgroundColor = UIColor.blue
+//        
+//        return [delete, share]
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "editCoreData"{
+            let path = segue.destination as! CoreDataEditVC
+            path.delegate = self
+            path.cellInfo = sender as? Task
+        } 
+        
+    }
+    
+    //when accessory button is pressed
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        print("accessory button tapped")
+        
+        performSegue(withIdentifier: "editCoreData", sender: taskInfo[indexPath.row])
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    
     
 
 }
