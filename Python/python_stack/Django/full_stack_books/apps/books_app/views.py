@@ -10,11 +10,11 @@ def index(request):
 	"books" : Book.objects.all()
 	}
 
-
 	return render(request, 'books_app/index.html', context)
 
 
 def add(request):
 	Book.objects.create(title=request.POST['title'], author=request.POST['author'], category=request.POST['category'])
 
+	print(Book.objects.all())
 	return redirect('/')
